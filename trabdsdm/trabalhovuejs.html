@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="trabs.css">
+<html>
+<head>
+	<title></title>
+
+</head>
+<div class="container">
+<body class = "center-align">
+
+
+	<script src="vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="trabs.css">
+	<link rel="stylesheet" type="text/css" href="materialize.css">
+
+<div id="login">
+  <h1>Login</h1>
+  <input id="barralogin" type="text" placeholder="Insira seu Username" v-model="input">
+  <a class="waves-effect waves-light btn blue darken-3" id="btnlogin" onclick="logar()">Login</a>
+</div>
+
+
+<div id="app">
+
+<div id="sla" style="display: none;">
+<input type="text" id="barramsg" placeholder="Mensagem" v-model="input">
+<button id="btn" v-on:click="postar">Postar Mensagem</button>
+
+</div>
+
+
+<div>
+<h3  id="feed" style ="display:none;">Feed de Notícias</h3>
+
+
+<div v-for="tweet in tweets">
+	<div id = "tweet">
+
+<p>O Usuário: <b>{{tweet.user}}</b> tweetou:</p>
+<p>{{tweet.text}}</p>
+<p>{{tweet.data}}{{tweet.hora}}</p>
+<a class="waves-effect waves-light btn blue darken-3" id="curtir" onclick="Curtir()">Curtir</a>
+
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<script src="trabs.js"></script>
+
+</body>
+</html>
